@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-image {
+  background: url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1244&q=80")
+    no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  filter: blur(3px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.clock {
+  border-radius: 50%;
+  width: 25rem;
+  height: 25rem;
+  border: 0.2rem solid #fffbfb;
+  padding: 10px;
+  position: relative;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.dot {
+    position: absolute;
+    left: calc(50% - 5px);;
+    bottom: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #FFFBFB;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.hour, .minute, .second {
+    background-color: #FFFBFB;
+    transform-origin: left;
+    position: absolute;
+    border-radius: 4px;
+    left: calc(50% + 4px);
+    bottom: calc(50% + 6px);
+    transform: rotate(-90deg);
+}
+
+ .hour {
+    z-index: 2;
+    width: 6.5em;
+    height: 5px;
+}
+
+.minute {
+    width: 8.5em;
+    height: 3px;
+    z-index: 2;
+}
+
+.second {
+   background-color: #D2042D;
+    width: 10em;
+    height: 2px;
+   z-index: 1;
+}
